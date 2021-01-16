@@ -20,7 +20,48 @@ body {
 }
 
 .header {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+}
+
+.header h1 {
     display: none;
+    font-size: 0.8rem;
+    color: grey;
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.header_btn_bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.header_btn_bar .more_info {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    outline: none;
+}
+
+.header_btn_bar .more_info:hover {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.header_btn_bar .more_info:active {
+    border: none;
+    outline: none;
+}
+
+.header_btn_bar img {
+    width: 30px;
 }
 
 .nav {
@@ -98,4 +139,72 @@ body {
 
 .hide {
     display: none;
+}
+
+/* Modal Login Form START*/
+/* The modal (background) */
+.modal_info {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.5);
+    align-items: flex-start;
+}
+
+/* Modal Content/Box */
+.modal_content {
+    background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
+    color: white;
+    margin: 50px auto;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    min-height: 200px;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add zoom animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
 }

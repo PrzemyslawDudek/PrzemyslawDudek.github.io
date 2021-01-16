@@ -13,6 +13,11 @@
         <div class="layout_container">
             <header class="header">
                 <h1>DudeCode.pl</h1>
+                <div class="header_btn_bar">
+                    <button onclick="document.getElementById('modal_container').style.display='flex'" class="more_info">
+                        <img src="./img/info_icon.png" alt="more info">
+                    </button>                    
+                </div>
             </header>
             <nav class="nav">
                 navigation
@@ -42,6 +47,22 @@
                     <a href="https://www.linkedin.com/in/przemyslaw-dudek-wroclaw/" target="blank"><img src="./img/linkedin.jpg" alt="linkedin"></a>
                 </div>
             </footer>            
-        </div>        
+        </div>
+        
+        <!-- The Modal -->
+        <div id="modal_container" class="modal_info">
+            <div class="modal_content animate">
+                <div>
+                    <span onclick="document.getElementById('modal_container').style.display='none'" class="close" title="Close Modal">
+                        &times;
+                    </span>
+                </div>
+                <p>
+                    Used Flexbox and little Java Script for pop up windows with this information text. Fonts are imported from Google fonts.
+                </p>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="./script/global_script.js"></script>
     </body>
 </html>
