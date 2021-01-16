@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&family=Source+Code+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+    background-color: white;
+    background-image: url(./img/email-pattern.png);
+    color: black;
+}
+
+.layout_container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vm;
+    margin: 10px auto;
+    padding: 0;
+    max-width: 720px;
+    box-shadow: 1px 1px 15px 3px grey;
+    background-color: white;
+    background-image: url(./img/lightpaperfibers.png);
+}
+
+.header {
+    display: none;
+}
+
+.nav {
+    display: none;
+}
+
+.main_section {
+
+}
+
+.about_me {
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.autor_img {
+    margin: 0 auto;
+    padding: 50px 0 20px 0;
+    height: 200px;
+    border-radius: 50%;
+    
+}
+
+.autor_img > img {
+    display: block;
+    margin: 10px auto;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid grey;
+}
+
+.autor_name {
+    font-family: 'Patrick Hand', cursive;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.autor_profession {
+    font-family: 'Patrick Hand', cursive;
+    text-transform: uppercase;
+}
+
+.autor_info {
+    max-width: 500px;
+}
+
+.footer {
+    padding-top: 5px;
+    border-top: 1px solid grey;
+}
+
+.share_btn_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    max-width: 80px;
+}
+
+.share_btn_bar a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.share_btn_bar img {
+    height: 30px;
+    width: 30px;
+}
+
+.hide {
+    display: none;
+}
