@@ -168,67 +168,25 @@ body {
     .main_section {
         flex: 0;
     }
-
-    .about_me {
-        text-align: center;
-        font-family: 'Prompt', sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     
     .autor_img {
-        margin: 0 auto;
-        padding: 50px 0 20px 0;
-        height: 200px;
-        border-radius: 50%;
-        
-    }
-    
-    .autor_img > img {
-        display: block;
-        margin: 10px auto;
-        height: 100%;
-        overflow: hidden;
-        border-radius: 50%;
-        border: 2px solid grey;
+        height: 200px;       
     }
 
     .autor_name {
-        font-family: 'Patrick Hand', cursive;
-        text-transform: uppercase;
         font-size: 2rem;
-        font-weight: bold;
     }
     
     .autor_profession {
-        font-family: 'Patrick Hand', cursive;
-        text-transform: uppercase;
         font-size: 1.4rem;
     }
     
     .autor_info {
-        max-width: 500px;
         font-size: 1rem;
     }
     
-    .footer {
-        padding-top: 5px;
-        border-top: 1px solid grey;
-    }
-    
     .share_btn_bar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px 0;
         max-width: 80px;
-    }
-    
-    .share_btn_bar a {
-        text-decoration: none;
-        display: inline-block;
     }
     
     .share_btn_bar img {
@@ -238,19 +196,9 @@ body {
 
 }
 
-
-
-
-
 .nav {
     display: none;
 }
-
-
-
-
-
-
 
 .hide {
     display: none;
