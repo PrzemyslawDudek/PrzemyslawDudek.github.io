@@ -9,7 +9,7 @@ body {
 .layout_container {
     display: flex;
     flex-direction: column;
-    min-height: 100vw;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     width: 100%;
