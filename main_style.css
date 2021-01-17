@@ -133,7 +133,7 @@ body {
     width: 60px;
 }
 
-@media (min-width: 720px) {
+@media only screen and (min-device-width: 720px) {
     body {
         background-image: url(./img/email-pattern.png);
     }
