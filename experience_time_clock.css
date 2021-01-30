@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Roboto+Mono:wght@700&family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+
+.container_time_count {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container_time_count h2 {
+    font-family: 'Patrick Hand', cursive;
+    font-weight: bold;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+}
+
+.countdown ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.container_time_count li {
+    display: block;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+.container_time_count li span {
+    display: block;
+    font-size: 3.0rem;
+}
+
+
+@media only screen and (min-device-width: 720px) {
+    .container_time_count h2 {
+        font-size: 1.0rem;
+    }
+
+    .container_time_count li {
+        font-size: 1.0rem;
+        padding: 0.75rem;
+    }
+
+    .container_time_count li span {
+        font-size: 3.0rem;
+    }
+}
