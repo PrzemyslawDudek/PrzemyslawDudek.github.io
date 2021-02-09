@@ -311,3 +311,19 @@ body {
     from {transform: scale(0)}
     to {transform: scale(1)}
 }
+
+/* Add zoom out animation*/
+.animate_zoom_out {
+    -webkit-animation: animate_zoom_out_frame 0.6s;
+    animation: animate_zoom_out_frame 0.6s;
+}
+
+@-webkit-keyframes animate_zoom_out_frame {
+    from {-webkit-transform: scale(1);}
+    to {-webkit-transform: scale(0);}
+}
+
+@keyframes animate_zoom_out_frame {
+    from {-webkit-transform: scale(1);}
+    to {-webkit-transform: scale(0);}
+}
