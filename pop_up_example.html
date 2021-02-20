@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="./img/dudecode.png">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./main_style.css">
+    <link rel="stylesheet" href="./pop_up_style.css">
+    <link rel="stylesheet" href="./experience_time_clock.css">
+
+    <title>DudeCode.pl</title>
+</head>
+
+<body>
+    <div class="layout_container">
+        <header class="header">
+            <h1>DudeCode.pl</h1>
+            <div class="header_btn_bar">
+                <button onclick="document.getElementById('modal_container').style.display='flex'" class="more_info">
+                    <img src="./img/info_icon.png" alt="more info">
+                </button>                    
+            </div>
+        </header>
+        <nav class="nav">
+            navigation
+        </nav>
+        <section class="main_section">
+            <div>
+                <h1>Pop in</h1>
+                <button id="popup_btn">Show Popup</button>
+            </div>
+        
+            
+            
+        </section>
+    
+
+        <footer class="footer">
+            <div class="share_btn_bar">
+                <a href="https://github.com/PrzemyslawDudek" target="blank"><img src="./img/github-logo.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/przemyslaw-dudek-wroclaw/" target="blank"><img src="./img/linkedin.jpg" alt="linkedin"></a>
+            </div>
+        </footer>  
+    </div>
+
+   
+
+    <div id="overlay">
+        <div id="popup">
+            <div class="popup_controls">
+                <span id="popup_close">&times;</span>
+            </div>
+            <div class="popup_content">
+                <h1>Some Popup Content</h1>
+            </div>
+        </div>
+    </div>  
+
+   
+
+    <script type="text/javascript">
+        // Initialize Variables
+        let closePopup = document.getElementById("popup_close");
+        let popup = document.getElementById("popup");
+        let overlay = document.getElementById("overlay");
+        let button = document.getElementById("popup_btn");
+        // Close Popup Event
+        overlay.onclick = function() {
+            overlay.className = '';
+            popup.className = '';
+        };
+        // Close Popup Event
+        closePopup.onclick = function() {
+            overlay.className = '';
+            popup.className = '';
+        };
+        // Show Overlay and Popup
+        button.onclick = function() {
+            overlay.className = 'show';
+            popup.className = 'show';
+        }
+    </script>
+</body>
+
+</html>
