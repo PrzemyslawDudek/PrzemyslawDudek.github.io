@@ -14,8 +14,8 @@
     transition: all 1s ease;
 }
 
-#popup {    
-    background: #fff;
+#popup {
+    background: rgb(230, 212, 212);
     width: 500px;
     height: 500px;
     transform: scale(0);
@@ -28,22 +28,151 @@
     padding: 10px;
     cursor: pointer;
 }
+
 .popup_content {
     padding: 10px;
 }
+
 #popup_btn {
     cursor: pointer;
 }
 
+
 /*Now show it*/
+
 #popup.show {
     visibility: visible;
     z-index: 200;
     opacity: 1;
-    transform: scale(1) /*scale it to a default size*/
-  }
+    transform: scale(1)/*scale it to a default size*/
+}
+
 #overlay.show {
-    opacity: 1;
+    opacity: 0.9;
     visibility: visible;
     z-index: 100;
+}
+
+
+/* cool close button */
+
+.cool_close_btn {
+    position: absolute;
+    right: 55px;
+    top: 5px;
+}
+
+.cool_close_btn a {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50px;
+    opacity: 1;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(247, 149, 29, 0.5);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(247, 149, 29, 0.5);
+    box-shadow: 0px 0px 30px 0px rgba(247, 149, 29, 0.5);
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cool_close_btn a > span {
+    background-color: #f5a700;
+    display: block;
+    height: 8px;
+    border-radius: 6px;
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+    position: absolute;
+    top: 21px;
+    margin-top: 0;
+    left: 5px;
+    width: 40px;
+    /* display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    align-items: center; */
+}
+
+.cool_close_btn .left > span, .cool_close_btn .right > span {
+    display: block;
+    background-color: #ed7f00;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.left {
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+
+.left > .circle_left {
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+    margin-left: 0;
+}
+
+.left > .circle_right {
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+    margin-left: 32px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+
+.right > .circle_left {
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+    margin-left: 0;
+}
+
+.right > .circle_right {
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+    margin-left: 32px;
+}
+
+.cool_close_btn a:hover {
+    
+}
+
+.cool_close_btn a:hover > span{
+    background-color: #2faee0;
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+}
+
+.cool_close_btn a:hover .circle_left, .cool_close_btn a:hover .circle_right {
+    background-color: #008ac9;
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+}
+
+.cool_close_btn a:hover .left .circle_left {
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+    margin-left: 32px;
+}
+
+.cool_close_btn a:hover .left .circle_right {
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+    margin-left: 0px;
+}
+
+.cool_close_btn a:hover .right .circle_left {
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+    margin-left: 32px;
+}
+
+.cool_close_btn a:hover .right .circle_right {
+    transition: all .4s cubic-bezier(.255, .61, .355, 1);
+    margin-left: 0px;
 }
