@@ -31,7 +31,7 @@
     text-transform: uppercase;
 }
 
-.container_time_count li span {
+.container_time_count .clock_value {
     display: block;
     font-size: 3.0rem;
 }
@@ -47,7 +47,7 @@
         padding: 0.75rem;
     }
 
-    .container_time_count li span {
+    .container_time_count .clock_value {
         font-size: 3.0rem;
     }
 }

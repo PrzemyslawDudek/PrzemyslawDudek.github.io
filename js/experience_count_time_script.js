@@ -1,6 +1,6 @@
 window.onload = function() {
-    console.log("Start Infinity Interval 400 ms.")
-    setInterval(startCountExperienceTime, 400);
+    console.log("Start Infinity Interval 100 ms.")
+    setInterval(startCountExperienceTime, 100);
 }
 
 const date = "Dec 02, 2019 08:00:00 GMT+0100";
@@ -17,12 +17,34 @@ function startCountExperienceTime() {
 
     let timeCountNow = new TimeCount(dateNow, pointOnTimeline)
 
-    document.getElementById("years").innerText = timeCountNow.getYearDistance();
-    document.getElementById("months").innerText = timeCountNow.getMonthDistance();
-    document.getElementById("days").innerText = timeCountNow.dayDistance();
-    document.getElementById("hours").innerText = getHours(timeDistance);
-    document.getElementById("minutes").innerText = getMinutes(timeDistance);
-    document.getElementById("seconds").innerText = getSeconds(timeDistance);
+    let years = timeCountNow.getYearDistance();
+    let months = timeCountNow.getMonthDistance();
+    let days = timeCountNow.dayDistance();
+    let hours = getHours(timeDistance);
+    let minutes = getMinutes(timeDistance);
+    let seconds = getSeconds(timeDistance);
+
+    document.getElementById("years").innerText = years;
+    document.getElementById("months").innerText = months;
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    document.getElementById("years_label").innerText = (isPlural(years) ? "years" : "year");
+    document.getElementById("months_label").innerText = (isPlural(months) ? "months" : "month");
+    document.getElementById("days_label").innerText = (isPlural(days) ? "days" : "day");
+    document.getElementById("hours_label").innerText = (isPlural(hours) ? "hours" : "hour");
+    document.getElementById("minutes_label").innerText = (isPlural(minutes) ? "minutes" : "minute");
+    document.getElementById("seconds_label").innerText = (isPlural(seconds) ? "seconds" : "second");
+}
+
+function isPlural(value) {
+    if (value == 1) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 function getHours(timeDistance) {
