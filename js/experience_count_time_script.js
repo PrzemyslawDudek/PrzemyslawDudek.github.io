@@ -31,7 +31,6 @@ function startCountExperienceTime() {
     document.getElementById("hours").innerText = hours;
     document.getElementById("minutes").innerText = minutes;
     document.getElementById("seconds").innerText = seconds;
-    // document.getElementById("ms_bar").style.height = ms + "%";
     document.getElementById("ms_bar_row").style.width = ms + "%";
 
     document.getElementById("years_label").innerText = (isPlural(years) ? "years" : "year");
