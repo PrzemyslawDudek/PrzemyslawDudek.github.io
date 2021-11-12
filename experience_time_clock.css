@@ -36,6 +36,38 @@
     font-size: 3.0rem;
 }
 
+.container_time_count .clock_ms_value {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 5px;   
+    border: 1px solid black;
+}
+
+.container_time_count .ms_bar {
+    display: block;
+    height: 10%;
+    width: 100%;   
+    background: black;
+}
+
+.container_time_count .clock_ms_value_row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 5px;   
+    border: 1px solid black;
+}
+
+.container_time_count .ms_bar_row {
+    display: block;
+    height: 100%;
+    width: 10%;   
+    background: black;
+}
+
 
 @media only screen and (min-device-width: 720px) {
     .container_time_count h2 {

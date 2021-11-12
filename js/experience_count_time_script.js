@@ -23,6 +23,7 @@ function startCountExperienceTime() {
     let hours = getHours(timeDistance);
     let minutes = getMinutes(timeDistance);
     let seconds = getSeconds(timeDistance);
+    let ms = getMs(timeDistance);
 
     document.getElementById("years").innerText = years;
     document.getElementById("months").innerText = months;
@@ -30,6 +31,8 @@ function startCountExperienceTime() {
     document.getElementById("hours").innerText = hours;
     document.getElementById("minutes").innerText = minutes;
     document.getElementById("seconds").innerText = seconds;
+    // document.getElementById("ms_bar").style.height = ms + "%";
+    document.getElementById("ms_bar_row").style.width = ms + "%";
 
     document.getElementById("years_label").innerText = (isPlural(years) ? "years" : "year");
     document.getElementById("months_label").innerText = (isPlural(months) ? "months" : "month");
@@ -72,6 +75,11 @@ function getMinutes(timeDistance) {
 function getSeconds(timeDistance) {
     let seconds = Math.floor(timeDistance % minute / second);
     return seconds.toString();
+}
+
+function getMs(timeDistance) {
+    let ms = Math.floor(timeDistance % second / 10);
+    return ms.toString();
 }
 
 function TimeCount(dateNow, pointOnTimeline) {
