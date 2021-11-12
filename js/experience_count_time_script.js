@@ -1,6 +1,6 @@
 window.onload = function() {
-    console.log("Start Infinity Interval 100 ms.")
-    setInterval(startCountExperienceTime, 100);
+    console.log("Start Infinity Interval 10 ms.")
+    setInterval(startCountExperienceTime, 10);
 }
 
 const date = "Dec 02, 2019 08:00:00 GMT+0100";
