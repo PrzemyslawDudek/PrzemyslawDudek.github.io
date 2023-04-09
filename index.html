@@ -14,10 +14,20 @@
         <div class="layout_container">
             <header class="header">
                 <h1>DudeCode.pl</h1>
-                <div class="header_btn_bar">
-                    <button onclick="document.getElementById('modal_container').style.display='flex'" class="more_info">
-                        <img src="./img/info_icon.png" alt="more info">
-                    </button>                    
+                <div class="header_image">
+                    <div class="author_image_wrapper">
+                        <div class="autor_img">
+                            <img src="./img/autor_image.jpg" alt="Autor Image">
+                        </div>
+                    </div>                    
+                </div>
+                <div class="author_title">
+                    <h2 class="autor_name">
+                        Przemysław Dudek 
+                    </h2>
+                    <h3 class="autor_profession">
+                        Java Developer
+                    </h3>
                 </div>
             </header>
             <nav class="nav">
@@ -25,29 +35,43 @@
             </nav>
             <section class="main_section">
                 <article class="about_me">
-                    <div class="autor_img">
-                        <img src="./img/autor_image.jpg" alt="Autor Image">
-                    </div>
-                    <h2 class="autor_name">
-                        Przemysław Dudek 
-                    </h2>
-                    <h3 class="autor_profession">
-                        Java Developer
-                    </h3>
+                    
                     <p class="autor_info">
                         <ul class="experience_list">
                             <li>
-                                From July 1, 2019, the commencement of commercial work.
+                                From July 1 2019, the commencement of commercial work.
                             </li>
                             <li>
-                                From December 2, 2019, starting work in a corporation and experience in developing Java applications is still growing. 
+                                From December 2 2019, starting work in a corporation. 
+                            </li>
+                            <li>
+                                From November 2 2022, new position as Java Regular Developer. 
                             </li>
                         </ul>                             
                     </p>
                     <p class="autor_info">
-                        I aspire to become a regular Java developer, but I know there is still a lot to learn and this learning will never end.    
+                        I aspire to become a regular Java developer, but I know there is still a lot to learn and this learning will never end.<br>
+                        My experience in developing Java applications is still growing.<br>
+                        <br>
+                        More about me you find on my Linkedin accout. 
+                        <span class="inline_img_link_wrapper">
+                            <a href="https://www.linkedin.com/in/przemyslaw-dudek-wroclaw/" target="blank"><img src="./img/linkedin.jpg" alt="linkedin"></a>
+                        </span>
                     </p>
                     <p class="autor_skills">
+                        
+                    </p>
+                </article>
+            </section>
+            <footer class="footer">
+                <div class="footer_row row">
+                    <div class="left_col_footer">
+                        <div class="quote_container">
+                            <p class="quote">"The only constant in the technology industry is change."</p>
+                            <p class="quote_author">-Marc Benioff</p>
+                        </div>
+                    </div>
+                    <div class="right_col_footer">
                         <div class="container_time_count">
                             <h2 class="headline">Experience Time in Corporations</h2>
                             <div class="countdown">
@@ -82,40 +106,17 @@
                                 <div id="ms_bar_row" class="ms_bar_row"></div>
                             </div>
                         </div>
-                        <script type="text/javascript" src="./js/experience_count_time_script.js" ></script>
-                    </p>
-                </article>
-            </section>
-            <footer class="footer">
+                    </div>
+                    
+                    <script type="text/javascript" src="./js/experience_count_time_script.js" ></script>
+                </div>               
+
+                
                 <div class="share_btn_bar">
                     <a href="https://github.com/PrzemyslawDudek" target="blank"><img src="./img/github-logo.png" alt="GitHub"></a>
                     <a href="https://www.linkedin.com/in/przemyslaw-dudek-wroclaw/" target="blank"><img src="./img/linkedin.jpg" alt="linkedin"></a>
                 </div>
             </footer>            
-        </div>
-        
-        <!-- The Modal -->
-        <div id="modal_container" class="modal_info">
-            <div class="modal_content animate">
-                <div class="close_wrapper">
-                    <div class="main_circle" onclick="document.getElementById('modal_container').style.display='none'" title="Close Modal">
-                        <div class="bar bar_v">      
-                            <div class="circle left_circle"></div>      
-                            <div class="circle rigth_circle"></div>      
-                        </div>
-                        <div class="bar bar_h">       
-                            <div class="circle left_circle"></div>       
-                            <div class="circle rigth_circle"></div>       
-                        </div>                        
-                    </div>
-                </div>
-                <p>
-                    Used Flexbox and little Java Script for pop up windows with this information text. Fonts are imported from Google fonts.
-                </p>
-                <p>
-                    Timer is created in javascript without extension library. It shows my experience in Years, Months, Days, Hours, Minutes, Seconds.
-                </p>
-            </div>
         </div>
 
         <script type="text/javascript" src="./js/global_script.js"></script>

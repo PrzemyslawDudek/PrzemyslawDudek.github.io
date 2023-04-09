@@ -20,6 +20,7 @@ body {
 
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     font-family: 'Source Code Pro', monospace;
     text-align: center;
@@ -32,6 +33,13 @@ body {
     flex-basis: 200px;
     flex-grow: 1;
     flex-shrink: 1;
+}
+
+.header_image {
+    background-image: url(./img/mobile-1087845_1920.jpg);
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .header_btn_bar {
@@ -127,6 +135,64 @@ body {
 .footer {
     padding-top: 5px;
     border-top: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_row {
+    display: flex;
+    align-items: center;
+}
+
+.left_col_footer {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 50px;
+}
+
+.right_col_footer {
+    padding: 50px;
+}
+
+.quote_container {
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote {
+    display: flex; 
+}
+
+.quote_author {
+    display: flex;
+    justify-content: end;
+}
+
+.inline_img_link_wrapper {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+}
+
+.inline_img_link_wrapper a {
+    text-decoration: none;
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.inline_img_link_wrapper img {
+    height: 30px;
+    width: 30px;
 }
 
 .share_btn_bar {
@@ -148,145 +214,14 @@ body {
     width: 60px;
 }
 
-/* Modal Login Form START*/
-/* The modal (background) */
-.modal_info {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(255,255,255);
-    background-color: rgba(255,255,255,0.5);
-    align-items: flex-start;
-}
-
-/* Modal Content/Box */
-.modal_content {
-    background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
-    color: white;
-    text-shadow: 2px 2px 3px black;
-    margin: 0;
-    border: 1px solid #888;
-    width: 100%;
-    min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
-    text-align: center;
-    font-family: 'Prompt', sans-serif;
-    font-size: 3rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* The Close Button */
-.close_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    background: rgba(255,255,255,0.7);
-    border-bottom: 1px solid black;
-}
-
-.main_circle {
-    width: 100px;
-    height: 100px;
-    margin: 5px;
-    border: 4px solid black;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .4s cubic-bezier(.255, .61, .355, 1);
-  }
-  
-  .bar {
-    position: absolute;
-    width: 80px;
-    height: 20px;
-    background: black;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all .4s cubic-bezier(.255, .61, .355, 1);
-  }
-  
-  .bar_v {
-    transform: rotate(45deg);
-  }
-  
-  .bar_h {
-    transform: rotate(-45deg);
-  }
-  
-  .circle {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: red;
-    transition: all .4s cubic-bezier(.255, .61, .355, 1);
-    position: absolute;
-  }
-  
-  .left_circle {
-    margin-left: 2px;
-  }
-  
-  .rigth_circle {
-    margin-left: 62px;
-  }
-
-  /* Close button on hover */ 
-  .main_circle:hover {
-    transform: rotate(90deg);
-    box-shadow: none;
-    border: 4px solid red;
-  }
-  
-  .main_circle:hover .bar {
-    background: red;
-    transition: all .4s cubic-bezier(.255, .61, .355, 1);
-  }
-  
-  .main_circle:hover .circle {
-    background: black;
-  }
-  
-  .main_circle:hover .left_circle {
-    margin-left: 62px;
-    transition: all .4s cubic-bezier(.255, .61, .355, 1);
-  }
-  
-  .main_circle:hover .rigth_circle {
-    margin-left: 2px;
-    transition: all .4s cubic-bezier(.255, .61, .355, 1);
-  }
-
 @media only screen and (min-device-width: 720px) {
     body {
         background-image: url(./img/email-pattern.png);
     }
 
     .layout_container {        
-        margin: 10px auto;
-        max-width: 720px;
+        margin: 0 auto;
         min-height: auto;
-        box-shadow: 1px 1px 15px 3px grey;
     }
 
     .header {
@@ -294,10 +229,31 @@ body {
         justify-content: flex-end;
         font-family: 'Source Code Pro', monospace;
         text-align: center;
+        height: 600px;
     }
     
     .header h1 {
         font-size: 0.8rem;
+    }
+
+    .header_image {
+        height: 400px;
+        position: relative;
+    }
+
+    .author_image_wrapper {
+        position: absolute;
+        width: 100%;
+        bottom: -150px;
+    }
+
+    .autor_img {
+        height: 300px;   
+        margin: 0 auto;  
+    }
+
+    .author_title {
+        padding-top: 150px;
     }
     
     .header_btn_bar .more_info:active {
@@ -311,10 +267,6 @@ body {
 
     .main_section {
         flex: 0;
-    }
-    
-    .autor_img {
-        height: 200px;       
     }
 
     .autor_name {
@@ -373,34 +325,3 @@ body {
 
 
 
-/* Add zoom animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s;
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-}
-
-/* Add zoom out animation*/
-.animate_zoom_out {
-    -webkit-animation: animate_zoom_out_frame 0.6s;
-    animation: animate_zoom_out_frame 0.6s;
-}
-
-@-webkit-keyframes animate_zoom_out_frame {
-    from {-webkit-transform: scale(1);}
-    to {-webkit-transform: scale(0);}
-}
-
-@keyframes animate_zoom_out_frame {
-    from {-webkit-transform: scale(1);}
-    to {-webkit-transform: scale(0);}
-}

@@ -11,7 +11,7 @@
 .container_time_count h2 {
     font-family: 'Patrick Hand', cursive;
     font-weight: bold;
-    letter-spacing: .125rem;
+    letter-spacing: .1rem;
     text-transform: uppercase;
 }
 
@@ -25,8 +25,8 @@
 
 .container_time_count li {
     display: block;
-    font-size: 1.2rem;
-    padding: 0.5rem;
+    font-size: 1.0rem;
+    padding: 0.3rem;
     list-style-type: none;
     text-transform: uppercase;
 }
@@ -71,15 +71,15 @@
 
 @media only screen and (min-device-width: 720px) {
     .container_time_count h2 {
-        font-size: 1.0rem;
+        font-size: 0.5rem;
     }
 
     .container_time_count li {
         font-size: 1.0rem;
-        padding: 0.75rem;
+        padding: 0.5rem;
     }
 
     .container_time_count .clock_value {
-        font-size: 3.0rem;
+        font-size: 2.0rem;
     }
 }
