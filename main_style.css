@@ -36,12 +36,6 @@ body {
     flex-shrink: 1;
 }
 
-.author_image_wrapper {
-    position: absolute;
-    width: 100%;
-    bottom: -150px;
-}
-
 .header_image {
     background-image: url(./img/mobile-1087845_1920.jpg);
     flex: 1;
@@ -50,6 +44,14 @@ body {
     height: 400px;
     position: relative;
 }
+
+.author_image_wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: -150px;
+}
+
+
 
 .author_title {
     padding-top: 150px;
